@@ -64,7 +64,7 @@ Figure 6: Contour plots of the 2D NLL function showing the result from the minim
 
 ![figure8](https://user-images.githubusercontent.com/56391325/146288810-db383e1f-7750-4e86-8f10-d253462b37ab.png)
 
-Figure 7: The error ellipse - a contour plot corresponding to one standard deviation change in the parameters above the minimum. The notation $\sigma^{\pm}_{\tau,\; a}$ and $\sigma'_{\tau, \;a}$ are errors calculated assuming $\rho_{\tau,a} = 0$ and $\rho_{\tau,a} = -0.4813$ between $\tau$ and $a$, respectively, where $\rho_{\tau,a}$ is the correlation coefficient.
+Figure 7: The error ellipse - a contour plot corresponding to one standard deviation change in the parameters above the minimum.
 
 
 
