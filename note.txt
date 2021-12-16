@@ -1,0 +1,88 @@
+Project B - A Log Likelihood fit for extracting the D0 lifetime.
+By Son-Gyo Jung (00948246)
+There is only one py file in the zip file:
+code file 1: ProjectB1v21.py (written using Canopy)
+
+How to generate figures and numerical results:
+Please copy and paste the corresponding piece of code to generate the results.
+
+Figure 1 = plotmanyfits(tau=0.4, sigma=0.2)
+Figure 2 = minimise(tau_0=2, tau_1=3, tau_2=5, function=cosh_func, plot=True, dataset=10000)
+Figure 3 = minimise(tau_0=0.2, tau_1=0.3, tau_2=0.5, function=NLL, plot=True, dataset=10000)
+       & = bisection(tau_0=0.2, tau_1=0.3, tau_2=0.5, estimate = 'parabolic', tau_plus = True, dataset=10000, graph = True)
+
+
+
+Generating the error in 1D
+1. parabolic sigma^+ = bisection(tau_0=0.2, tau_1=0.3, tau_2=0.5, estimate = 'parabolic', tau_plus = True, dataset=10000, graph = False)
+		   & = secant(tau_0=0.2, tau_1=0.3, tau_2=0.5, estimate = 'parabolic', tau_plus = True, dataset=10000, graph = False)
+
+2. parabolic sigma^- = bisection(tau_0=0.2, tau_1=0.3, tau_2=0.5, estimate = 'parabolic', tau_plus = False, dataset=10000, graph = False)
+		   & = secant(tau_0=0.2, tau_1=0.3, tau_2=0.5, estimate = 'parabolic', tau_plus = False, dataset=10000, graph = False)
+
+3. nll sigma^+ = bisection(tau_0=0.2, tau_1=0.3, tau_2=0.5, estimate = 'nll', tau_plus = True, dataset=10000, graph = False)
+	     & = secant(tau_0=0.2, tau_1=0.3, tau_2=0.5, estimate = 'nll', tau_plus = True, dataset=10000, graph = False)
+
+4. nll sigma^- = bisection(tau_0=0.2, tau_1=0.3, tau_2=0.5, estimate = 'nll', tau_plus = False, dataset=10000, graph = False)
+	     & = secant(tau_0=0.2, tau_1=0.3, tau_2=0.5, estimate = 'nll', tau_plus = False, dataset=10000, graph = False)
+
+
+
+
+Figure 4 = sdev(method=secant, estimate='nll', uppersigma=True)
+       & = sdev(method=secant, estimate='nll', uppersigma=False)
+
+
+
+Note: scheme can either be 'cosh', 'fds', 'cds'. 
+Figure 5 = gradient_method(n = 300, scheme = 'cosh', contour_plot=True)
+       & = newton_method(n = 300, scheme = 'cosh', contour_plot=True)
+       & = q_newton(n = 300, scheme = 'cosh', contour_plot=True)
+
+
+
+Note: Generate one contour_plot and set coutour_plot = False for the rest to speed up the graph generation.
+figure 6 = gradient_method(n = 300, scheme = 'cds', contour_plot=True)
+       & = newton_method(n = 300, scheme = 'cds', contour_plot=True)
+       & = q_newton(n = 300, scheme = 'cds', contour_plot=True)
+
+
+Generating the error in 2D
+-Using secant method
+1. tau_error_secant(minimiser = gradient_method, tau_plus = True)
+2. tau_error_secant(minimiser = gradient_method, tau_plus = False)
+3. tau_error_secant(minimiser = q_newton, tau_plus = True)
+4. tau_error_secant(minimiser = q_newton, tau_plus = False)
+5. tau_error_secant(minimiser = newton_method, tau_plus = True)
+6. tau_error_secant(minimiser = newton_method, tau_plus = False)
+7. a_error_secant(minimiser = gradient_method, a_plus = True)
+8. a_error_secant(minimiser = gradient_method, a_plus = False)
+9. a_error_secant(minimiser = q_newton, tau_plus = True)
+10. a_error_secant(minimiser = q_newton, tau_plus = False)
+11. a_error_secant(minimiser = newton_method, tau_plus = True)
+12. a_error_secant(minimiser = newton_method, tau_plus = False)
+
+-Using bisection method
+1. tau_error_bisection(minimiser = gradient_method, tau_plus = True)
+2. tau_error_bisection(minimiser = gradient_method, tau_plus = False)
+3. tau_error_bisection(minimiser = q_newton, tau_plus = True)
+4. tau_error_bisection(minimiser = q_newton, tau_plus = False)
+5. tau_error_bisection(minimiser = newton_method, tau_plus = True)
+6. tau_error_bisection(minimiser = newton_method, tau_plus = False)
+7. a_error_bisection(minimiser = gradient_method, a_plus = True)
+8. a_error_bisection(minimiser = gradient_method, a_plus = False)
+9. a_error_bisection(minimiser = q_newton, tau_plus = True)
+10. a_error_bisection(minimiser = q_newton, tau_plus = False)
+11. a_error_bisection(minimiser = newton_method, tau_plus = True)
+12. a_error_bisection(minimiser = newton_method, tau_plus = False)
+
+
+Generating the error using the error matrix
+1. error_matrix(tau = 0.4097, a=0.9837)
+
+
+
+Figure 7 = contour_one_sigma()
+
+
+Any question, please email me @ sgj14@ic.ac.uk
