@@ -1,5 +1,5 @@
 # Minimisation of a negative log likelihood fit to extract the lifetime of the D^0 meson (MNLL2ELDM)
-
+[![DOI](https://zenodo.org/badge/438812325.svg)](https://zenodo.org/badge/latestdoi/438812325)
 
 
 ## Introduction
@@ -66,7 +66,7 @@ Figure 6: Contour plots of the 2D NLL function showing the result from the minim
 
 Figure 7: The error ellipse - a contour plot corresponding to one standard deviation change in the parameters above the minimum.
 
-
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
 
