@@ -66,8 +66,6 @@ Figure 6: Contour plots of the 2D NLL function showing the result from the minim
 
 Figure 7: The error ellipse - a contour plot corresponding to one standard deviation change in the parameters above the minimum.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 
 
 
@@ -77,4 +75,4 @@ Figure 7: The error ellipse - a contour plot corresponding to one standard devia
 
 
 ## License
-[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://choosealicense.com/licenses/mit/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
